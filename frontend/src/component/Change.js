@@ -30,11 +30,7 @@ function Change() {
         const  re =fetch(url, option)
         const data =re.json()
         console.log(data)
-
-
-
     }
-
     return (
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">

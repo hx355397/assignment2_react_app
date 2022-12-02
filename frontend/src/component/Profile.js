@@ -49,11 +49,12 @@ function Profile({}) {
     if (!data) {
         return <div>Loading...</div>;
     }else {
+        let index = data.length -1
         return (
             <div>
                 <Photo/>
-                <Name text={data[0].name}/>
-                <Biography text={data[0].biography}/>
+                <Name text={data[index].name}/>
+                <Biography text={data[index].biography}/>
             </div>
         );
     }
