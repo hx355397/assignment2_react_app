@@ -19,9 +19,11 @@ router.post('/', function(req, res, next) {
   const data =req.body
   console.log(data)
   const zhi=data.data
-  const sqlStr='insert into user(name,biography) values (?,?)'
+  console.log("ok")
+  const sqlStr='INSERT INTO user (name,biography) VALUES ("'+zhi.name+'","'+zhi.biography+'")'
   const target={name:zhi.name,biography:zhi.biography}
-  db.query(sqlStr,target,(err,result)=>{
+  console.log(sqlStr)
+  db.query(sqlStr,(err,result)=>{
     if (err){
       res.send(console.log(err.message))
     }
