@@ -13,15 +13,13 @@ router.get('/', function(req, res, next) {
       res.send(result)
     }
   })
-
 });
 
 router.post('/', function(req, res, next) {
   const data =req.body
   console.log(data)
   const zhi=data.data
-  console.log("ok")
-  const sqlStr='update user set ?'
+  const sqlStr='insert into user(name,biography) values (?,?)'
   const target={name:zhi.name,biography:zhi.biography}
   db.query(sqlStr,target,(err,result)=>{
     if (err){
