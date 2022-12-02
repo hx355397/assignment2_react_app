@@ -45,7 +45,7 @@ Profile.propTypes = {
 };
 function Profile({}) {
 
-   const data = useFetch("/api/users/");
+   const data = useFetch("/api/users");
     if (!data) {
         return <div>Loading...</div>;
     }else {
