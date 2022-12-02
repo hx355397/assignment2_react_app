@@ -16,7 +16,7 @@ const useFetch = url => {
     return data;
 };
 function History() {
-    const historyArray = useFetch("http://172.31.85.70:3000/users/");
+    const historyArray = useFetch("http://localhost/api/users/");
     const renderPerson = (person, index) => {
         return (
             <tr key={index}>

@@ -45,7 +45,7 @@ Profile.propTypes = {
 };
 function Profile({}) {
 
-   const data = useFetch("http://172.31.85.70:3000/users/");
+   const data = useFetch("http://localhost/api/users/");
     if (!data) {
         return <div>Loading...</div>;
     }else {

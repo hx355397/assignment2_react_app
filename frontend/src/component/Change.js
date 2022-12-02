@@ -11,7 +11,7 @@ function Change() {
         biography:biography
     }
     // fetch url
-    const url ="http://172.31.85.70:3000/users/"
+    const url ="http://localhost/api/users/"
     // fetch option
     const option={
         method:"POST",
